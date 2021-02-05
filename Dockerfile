@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1.2
-FROM hulkinbrain/docker-opencv2
+FROM python:2
 
 WORKDIR /app
 COPY requirements2.7.txt ./
