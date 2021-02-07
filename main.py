@@ -7,14 +7,16 @@ cropped_gx, cropped_gy = crop_watermark(gx, gy)
 W_m = poisson_reconstruct(cropped_gx, cropped_gy)
 
 # random photo
-img = cv2.imread('images/fotolia_processed/fotolia_137840645.jpg')
+img = cv2.imread('images/fotolia_processed/fotolia_137840668.jpg')
 im, start, end = watermark_detector(img, cropped_gx, cropped_gy)
 
 # plt.imshow(im)
 # plt.show()
 # We are done with watermark estimation
 # W_m is the cropped watermark
-num_images = len(gxlist)
+num_images = len(list(gxlist))
+
+print(num_images)
 
 J, img_paths = get_cropped_images('images/fotolia_processed', num_images, start, end, cropped_gx.shape)
 # get a random subset of J
@@ -24,18 +26,18 @@ idx = idx[:25]
 Wm = W_m - W_m.min()
 
 # get threshold of W_m for alpha matte estimate
-alph_est = estimate_normalized_alpha(J, Wm)
+alph_est = estimate_normalized_alpha(J, Wm, len(J))
 alph = np.stack([alph_est, alph_est, alph_est], axis=2)
 C, est_Ik = estimate_blend_factor(J, Wm, alph)
 
 alpha = alph.copy()
-for i in xrange(3):
+for i in range(3):
 	alpha[:,:,i] = C[i]*alpha[:,:,i]
 
 Wm = Wm + alpha*est_Ik
 
 W = Wm.copy()
-for i in xrange(3):
+for i in range(3):
 	W[:,:,i]/=C[i]
 
 Jt = J[:25]
