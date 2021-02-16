@@ -3,6 +3,13 @@ This was a project that was built as part of project for CS663 (Digital Image Pr
 This is a crude Python implementation of the paper "On The Effectiveness Of Visible Watermarks", Tali Dekel, Michael Rubinstein, Ce Liu and William T. Freeman,
 Conference on Computer Vision and Pattern Recongnition (CVPR), 2017.
 
+## Run local juypter server
+
+```
+docker run --rm -it -v $(pwd):/home/jovyan --name jupyter \
+   -e GRANT_SUDO=yes  -p $IP:8888:8888 jupyter/scipy-notebook:17aba6048f44
+```
+
 ### Rough sketch of the algorithm
 A watermarked image `J` is obtained by imposing a watermark `W` over an unwatermarked image `I` with a blend factor <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>. Specifically, we have the following equation:
 
