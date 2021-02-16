@@ -5,6 +5,7 @@ import os
 import scipy
 from scipy.sparse import *
 
+tf.compat.v1.disable_v2_behavior()
 # helpers that are going to be useful here
 sobel_x = tf.constant([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]], tf.float32)
 sobel_y = tf.transpose(sobel_x)
@@ -83,10 +84,10 @@ def image_watermark_decompose_model(num_images, m, n, chan=3, l_i=1, l_w=1, l_al
     #    W(k) = (num_images, m, n, chan) -> all watermarks
     
     # All placeholders
-    J = tf.placeholder(tf.float32, shape=(num_images, m, n, chan), name='J')
-    alpha = tf.placeholder(tf.float32, shape=(m, n, chan), name='alpha')
-    W_m = tf.placeholder(tf.float32, shape=(m, n, chan), name='W_m')
-    W_median = tf.placeholder(tf.float32, shape=(m, n, chan), name='W_median')
+    J = tf.Variable(tf.float32, shape=(num_images, m, n, chan), name='J')
+    alpha = tf.Variable(tf.float32, shape=(m, n, chan), name='alpha')
+    W_m = tf.Variable(tf.float32, shape=(m, n, chan), name='W_m')
+    W_median = tf.Variable(tf.float32, shape=(m, n, chan), name='W_median')
     
     # All variables
     I = tf.Variable(np.random.randn(num_images, m, n, chan), name='I', dtype=tf.float32)
@@ -114,11 +115,11 @@ def matte_update_model(num_images, m, n, chan=3, l_alpha=1, beta=1, lr=0.07):
     # We use the rest of the items as constants and only estimate alpha
 
     # All placeholders
-    J = tf.placeholder(tf.float32, shape=(num_images, m, n, chan), name='J')
-    W_m = tf.placeholder(tf.float32, shape=(m, n, chan), name='W_m')
-    W_median = tf.placeholder(tf.float32, shape=(m, n, chan), name='W_median')
-    I = tf.placeholder(tf.float32, shape=(num_images, m, n, chan), name='I')
-    W = tf.placeholder(tf.float32, shape=(num_images, m, n, chan), name='W')
+    J = tf.Variable(tf.float32, shape=(num_images, m, n, chan), name='J')
+    W_m = tf.Variable(tf.float32, shape=(m, n, chan), name='W_m')
+    W_median = tf.Variable(tf.float32, shape=(m, n, chan), name='W_median')
+    I = tf.Variable(tf.float32, shape=(num_images, m, n, chan), name='I')
+    W = tf.Variable(tf.float32, shape=(num_images, m, n, chan), name='W')
 
     alpha = tf.Variable(np.random.randn(m, n, chan), dtype=tf.float32)
 
