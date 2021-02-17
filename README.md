@@ -6,8 +6,7 @@ Conference on Computer Vision and Pattern Recongnition (CVPR), 2017.
 ## Run local juypter server
 
 ```
-docker run --rm -it -v $(pwd):/home/jovyan --name jupyter \
-   -e GRANT_SUDO=yes  -p $IP:8888:8888 jupyter/scipy-notebook:17aba6048f44
+docker-compose up
 ```
 
 ### Rough sketch of the algorithm
