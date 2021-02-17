@@ -1,0 +1,104 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 7 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'src/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'src/preprocess.py'
+ outputting to 'src_v2/preprocess.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/tensorflow_experiments.py'
+ outputting to 'src_v2/tensorflow_experiments.py'
+--------------------------------------------------------------------------------
+
+10:10: INFO: Added keywords to args of function 'tf.transpose'
+25:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+31:9: INFO: Added keywords to args of function 'tf.nn.conv2d'
+31:9: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+32:9: INFO: Added keywords to args of function 'tf.nn.conv2d'
+32:9: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+33:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+33:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+34:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+34:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+36:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+42:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+42:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+43:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+43:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+44:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+55:10: INFO: Added keywords to args of function 'tf.nn.conv2d'
+55:10: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+56:10: INFO: Added keywords to args of function 'tf.nn.conv2d'
+56:10: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+61:11: INFO: Added keywords to args of function 'tf.nn.conv2d'
+61:11: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+62:11: INFO: Added keywords to args of function 'tf.nn.conv2d'
+62:11: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+65:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+69:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+86:8: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+87:12: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+88:10: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+89:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+99:16: INFO: Renamed 'tf.train.GradientDescentOptimizer' to 'tf.compat.v1.train.GradientDescentOptimizer'
+117:8: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+118:10: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+119:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+120:8: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+121:8: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+126:16: INFO: Renamed 'tf.train.GradientDescentOptimizer' to 'tf.compat.v1.train.GradientDescentOptimizer'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/image_crawler.py'
+ outputting to 'src_v2/image_crawler.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/watermark_reconstruct.py'
+ outputting to 'src_v2/watermark_reconstruct.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/estimate_watermark.py'
+ outputting to 'src_v2/estimate_watermark.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/closed_form_matting.py'
+ outputting to 'src_v2/closed_form_matting.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/__init__.py'
+ outputting to 'src_v2/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
