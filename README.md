@@ -6,7 +6,7 @@ Conference on Computer Vision and Pattern Recongnition (CVPR), 2017.
 ## Run local juypter server
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
 Access local notebook
