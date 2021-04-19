@@ -9,6 +9,16 @@ Conference on Computer Vision and Pattern Recongnition (CVPR), 2017.
 docker-compose up
 ```
 
+Access local notebook
+
+http://localhost:8888
+
+Changes by me:
+
+* Python3
+* tensorflow 2.4
+* juypter server in docker
+
 ### Rough sketch of the algorithm
 A watermarked image `J` is obtained by imposing a watermark `W` over an unwatermarked image `I` with a blend factor <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>. Specifically, we have the following equation:
 
