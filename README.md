@@ -71,7 +71,8 @@ However, this is a rough implementation and the removal of watermark leaves some
 
 More information
 -------
-For more information, refer to the original paper [here](http://openaccess.thecvf.com/content_cvpr_2017/papers/Dekel_On_the_Effectiveness_CVPR_2017_paper.pdf)
+For more information, refer to the original paper [here](http://openaccess.thecvf.com/content_cvpr_2017/papers/Dekel_On_the_Effectiveness_CVPR_2017_paper.pdf) and
+other supplement information (https://watermark-cvpr17.github.io/)
 
 Disclaimer
 --------
